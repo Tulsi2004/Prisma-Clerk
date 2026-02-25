@@ -28,7 +28,7 @@ export default function NewPost() {
       <Form action={createPost} className="space-y-6">
         <div>
           <label htmlFor="title" className="block text-lg mb-2">
-            Title
+            Titles
           </label>
           <input
             type="text"
@@ -40,7 +40,7 @@ export default function NewPost() {
         </div>
         <div>
           <label htmlFor="content" className="block text-lg mb-2">
-            Content
+            Contents
           </label>
           <textarea
             id="content"
