@@ -7,8 +7,10 @@ import {
   SignedOut,
   UserButton,
 }from '@clerk/nextjs'
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className={inter.variable}>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
             <header className="flex justify-end items-center p-4 gap-4 h-16">
               {/* Show the sign-in and sign-up buttons when the user is signed out */}
